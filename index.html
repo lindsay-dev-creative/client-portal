@@ -40,6 +40,7 @@
       font-weight: 300;
       font-size: 16px;                                                                           
       line-height: 1.7;
+      text-wrap: pretty;
       min-height: 100vh;                                                                         
       overflow-x: hidden;
       -webkit-font-smoothing: antialiased;                                                       
@@ -102,7 +103,7 @@
     h1 {                                                                                         
       font-family: var(--font-heading);
       font-weight: 400;
-      font-size: clamp(42px, 6vw, 64px);
+      font-size: clamp(36px, 6vw, 55px);
       line-height: 1.2;                                                                          
       letter-spacing: -0.02em;
       color: var(--off-white);                                                                   
@@ -112,10 +113,10 @@
     h1 em { font-style: italic; color: var(--gold-light); }                                      
                   
     .intro {                                                                                     
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.7;
       color: var(--gray-3);
-      max-width: 620px;
+      max-width: 640px;
       margin-bottom: 72px;                                                                       
       font-weight: 300;
     }                                                                                            
@@ -126,8 +127,8 @@
     h2 {          
       font-family: var(--font-heading);
       font-weight: 400;                                                                          
-      font-size: 32px;
-      line-height: 1.2;                                                                          
+      font-size: 35px;
+      line-height: 49px;                                                                          
       letter-spacing: -0.01em;
       color: var(--off-white);                                                                   
       margin-bottom: 18px;
@@ -161,41 +162,20 @@
                                                                                                  
     .closing p {  
       color: var(--gray-3);
-      max-width: 620px;                                                                          
+      max-width: 640px;                                                                          
       margin-bottom: 40px;
-    }                                                                                            
-                  
-    .signoff {
-      font-family: var(--font-body);
-      font-size: 13px;                                                                           
-      font-weight: 500;
-      letter-spacing: 0.06em;                                                                    
-      color: var(--gold);
-      display: flex;
-      align-items: center;                                                                       
-      gap: 14px;
-      flex-wrap: wrap;                                                                           
-    }             
-
-    .signoff a {
-      color: var(--gold);
-      text-decoration: none;                                                                     
-      transition: color 0.2s ease;
-    }                                                                                            
-                  
-    .signoff a:hover { color: var(--gold-light); }
-    .signoff .sep { color: var(--dark-2); font-weight: 300; }
+    }                                                                                                         
                                                                                                  
     @media (max-width: 720px) {                                                                  
-      .page { padding: 64px 20px 48px; }                                                         
-      h1 { font-size: 40px; line-height: 1.15; }                                                 
+      .page { padding: 64px 64px 48px; }                                                         
+      h1 { font-size: 45px; line-height: 56px; }                                                 
       .intro { font-size: 16px; }                                                                
       .section p { margin-left: 0; }
       h2 {                                                                                       
         flex-direction: column;                                                                  
         align-items: flex-start;
         gap: 6px;                                                                                
-        font-size: 26px;
+        font-size: 37px;
       }                                                                                          
       .section-number { min-width: 0; }
       .brand-logo { width: 40px; height: 40px; }                                                 
