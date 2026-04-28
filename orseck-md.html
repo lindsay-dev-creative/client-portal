@@ -47,8 +47,6 @@
     font-size: 16px;
     line-height: 1.7;
     text-wrap: pretty;
-    max-width: 640px;
-    margin: 0 auto;
     min-height: 100vh;
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
@@ -62,7 +60,7 @@
   .page {
     max-width: 780px;
     margin: 0 auto;
-    padding: 100px 40px 80px;
+    padding: 100px 48px 80px;
   }
 
   .brand {
@@ -111,9 +109,9 @@
   h1 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: clamp(29px, 6vw, 44px);
+    font-size: clamp(36px, 6vw, 55px);
     line-height: 1.2;
-    letter-spacing: -0.015em;
+    letter-spacing: -0.02em;
     color: var(--off-white);
     margin-bottom: 32px;
   }
@@ -135,9 +133,9 @@
   h2 {
     font-family: var(--font-heading);
     font-weight: 400;
-    font-size: clamp(26px, 5.4vw, 35px);
-    line-height: 49px;
-    letter-spacing: -0.01em;
+    font-size: 44px;
+    line-height: 1.2em;
+    letter-spacing: -0.015em;
     color: var(--off-white);
     margin-bottom: 18px;
     display: flex;
@@ -156,7 +154,7 @@
 
   .section p {
     color: var(--gray-3);
-    max-width: 640px;
+    max-width: 720px;
     margin-left: 44px;
   }
 
@@ -203,15 +201,15 @@
 
   @media (max-width: 720px) {
     .page { padding: 64px 64px 48px; }
-    h1 { font-size: 32px; line-height: 44px; }
+    h1 { font-size: 32px; line-height: 1.3em; }
     .intro { font-size: 16px; }
     .section p { margin-left: 0; }
     h2 {
       flex-direction: column;
       align-items: flex-start;
       gap: 6px;
-      font-size: 26px;
-      line-height: 37px;
+      font-size: 29px;
+      line-height: 1.3em;
     }
     .section-number { min-width: 0; }
     .brand-logo { width: 40px; height: 40px; }
