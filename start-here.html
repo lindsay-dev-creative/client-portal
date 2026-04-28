@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<!--
+  pageName -- Start Here: How to use your Client Portal
+  sourceNotion -- https://www.notion.so/Start-here-How-to-use-your-Client-Portal-345230022611813493dcf775a52165f1
+  overviewURL -- https://welcome.lindsaydevcreative.com/start-here.html
+-->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Start Here: How to use your Client Portal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black: #0a0a0a;
+    --near-black: #1a1a1a;
+    --dark-1: #262626;
+    --dark-2: #2e2e2e;
+    --gray-1: #4d4d4d;
+    --gray-2: #7a7a7a;
+    --gray-3: #b8b8b8;
+    --off-white: #ededed;
+    --gold: #d4a85a;
+    --gold-light: #e8c88a;
+    --font-heading: 'PP Editorial New', 'Editorial New', Georgia, serif;
+    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--black);
+    color: var(--off-white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    text-wrap: pretty;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(212, 168, 90, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(212, 168, 90, 0.04) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 100px 48px 80px;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background-color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 55px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--off-white);
+    margin-bottom: 32px;
+  }
+
+  h1 em { font-style: italic; color: var(--gold-light); }
+
+  .intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gray-3);
+    max-width: 640px;
+    margin-bottom: 24px;
+    font-weight: 300;
+  }
+
+  .intro + .intro { margin-bottom: 72px; }
+
+  .section { margin-bottom: 56px; }
+  .section:last-of-type { margin-bottom: 0; }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.2em;
+    letter-spacing: -0.015em;
+    color: var(--off-white);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .section-number {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    min-width: 28px;
+  }
+
+  .section p {
+    color: var(--gray-3);
+    max-width: 720px;
+    margin-left: 44px;
+  }
+
+  .section p + p { margin-top: 16px; }
+
+  .section ul {
+    color: var(--gray-3);
+    max-width: 720px;
+    margin-left: 44px;
+    margin-top: 16px;
+    padding-left: 20px;
+  }
+
+  .section ul li { margin-bottom: 8px; }
+
+  .section a {
+    color: var(--gold);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(212, 168, 90, 0.4);
+    transition: border-color 0.2s ease;
+  }
+
+  .section a:hover { border-bottom-color: var(--gold); }
+
+  .tip {
+    margin-left: 44px;
+    margin-top: 20px;
+    padding: 20px 24px;
+    background-color: rgba(212, 168, 90, 0.05);
+    border-left: 2px solid var(--gold);
+    max-width: 720px;
+  }
+
+  .tip p {
+    margin-left: 0;
+    max-width: none;
+  }
+
+  .tip-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  .closing {
+    margin-top: 80px;
+    padding: 36px 0 0;
+    border-top: 1px solid var(--dark-2);
+  }
+
+  .closing h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+  }
+
+  .closing p {
+    color: var(--gray-3);
+    max-width: 580px;
+    margin-bottom: 16px;
+  }
+
+  .signoff {
+    color: var(--gold-light);
+    font-style: italic;
+    font-family: var(--font-heading);
+    font-size: 18px;
+    margin-top: 24px;
+    margin-bottom: 32px;
+  }
+
+  @media (max-width: 720px) {
+    .page { padding: 64px 64px 48px; }
+    h1 { font-size: 32px; line-height: 1.3em; }
+    .intro { font-size: 16px; }
+    .section p, .section ul, .tip { margin-left: 0; }
+    h2 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 29px;
+      line-height: 1.3em;
+    }
+    .section-number { min-width: 0; }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      white-space: normal;
+    }
+    .eyebrow::before { width: 24px; }
+  }
+</style>
+</head>
+<body>
+  <main class="page">
+
+<div class="eyebrow">client portal · start here</div>
+
+<h1>How to use your <em>Client Portal</em></h1>
+
+<p class="intro">I'll check the portal daily during active work phases and respond to requests within one business day. You'll get regular project updates, either in our scheduled meetings or through the Communication Hub.</p>
+
+<p class="intro">If I'm going to be out or delayed, I'll let you know in advance. My goal is to keep things clear, on pace, and as stress free as possible for you.</p>
+
+<section class="section">
+  <h2><span class="section-number">01</span>Latest Update</h2>
+  <p>The Latest Update in the right sidebar shows the most recent change or action tied to your project. Check here first to see what's new since you last visited.</p>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">02</span>Resources</h2>
+  <p><a href="https://drive.google.com/drive/folders/1QgrxhBr5nR0uKn7EHLloUah6yVteH1o3?usp=drive_link"><strong>Admin</strong></a>: Contracts &amp; Agreements, Invoices &amp; Receipts, Onboarding, and Proposals &amp; SOWs will live here.</p>
+  <p><a href="https://drive.google.com/drive/folders/1oKRTDXMgOArdbEV5RCjqfa-91wc7nZs7?usp=drive_link"><strong>Website Files &amp; Docs</strong></a>: Site Files, Website Copy, and Off-boarding Files and Assets will live here.</p>
+  <p><a href="https://drive.google.com/drive/folders/1AXo-bPWjUTHT2x4IWC5PfaVVib1uj0-N?usp=drive_link"><strong>Brand Assets</strong></a>: This is where you can drop any brand materials (logos, colors, images, fonts, past marketing assets). You can drag and drop from your desktop, or use the + New button in Drive to upload.</p>
+  <div class="tip">
+    <span class="tip-label">Tip</span>
+    <p>Upload originals when possible. Files ending in .ai, .eps, .pdf, or .svg are preferred for logos. Everything stays in that folder for the life of the project, so nothing gets lost in email.</p>
+  </div>
+  <p style="margin-top: 20px;"><em>I'll add files as we go, so check back here first if you're looking for something specific.</em></p>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">03</span>Communication Hub</h2>
+  <p>This is home base for everything project-related. Instead of digging through old email threads, use this space to submit requests, ask questions, or share anything you'd like me to look at.</p>
+  <p>To add a new line item, click into the <strong>Title</strong> column on an empty row and fill in as many details as you can. I'll get a notification and respond within one business day. Keeping everything here means nothing slips through the cracks, and you'll always have a record of what's been asked and answered.</p>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">04</span>Client To Do's</h2>
+  <p>This is where I'll assign action items to you. These are things I need from you to keep the project moving, like copy, image selections, feedback, or approvals. Each to do will have a description and a due date.</p>
+  <p>When you've completed a to do, set the <strong>Status</strong> column to <strong>Review Complete</strong>. If you have questions about anything, drop a note in the Communication Hub and I'll follow up within one business day.</p>
+  <div class="tip">
+    <span class="tip-label">How to give feedback</span>
+    <p>Clear feedback moves things forward faster. When you're reviewing a deliverable, try to be as specific as possible. Instead of <em>"I don't like this,"</em> something like <em>"The headline feels too long, can we tighten it?"</em> gives me exactly what I need to make the revision.</p>
+  </div>
+  <ul>
+    <li>Consolidate all your feedback before sending it over, one round at a time.</li>
+    <li>Loop in anyone whose input matters before finalizing a round.</li>
+    <li>If you love something, say so. Knowing what's working is just as useful as knowing what isn't.</li>
+  </ul>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">05</span>Project Meeting Notes</h2>
+  <p>This is where I'll document every meeting we have, so you don't have to take notes or worry about forgetting what was discussed.</p>
+  <p>After each call, I'll log the date, what we covered, any decisions made, and next steps. If the meeting was recorded, you'll find the link here too, so all project meeting notes stay in one searchable place.</p>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">06</span>Project Timeline</h2>
+  <p>The Project Timeline shows every phase of your project from start to launch, with dates for each one. This is your at a glance view of where we are and what's coming next. Each item has a status so you can see what's not started, in progress, or done.</p>
+  <p>Please note, timelines can flex based on feedback rounds and revisions. If a phase shifts, the timeline here will be updated to reflect the new dates.</p>
+</section>
+
+<section class="section">
+  <h2><span class="section-number">07</span>Frequently Asked Questions</h2>
+  <p>Start with the <a href="https://welcome.lindsaydevcreative.com/website-development-project-faqs.html"><strong>Web Development Project FAQs</strong></a> for anything specific to your build (timelines, revisions, launch, hosting).</p>
+  <p>Check the <a href="https://welcome.lindsaydevcreative.com/general-faqs.html"><strong>General FAQs</strong></a> for questions about how we work together.</p>
+  <p>If you can't find what you're looking for, drop a note in the Communication Hub. I'll likely add it to the FAQ too, so future clients benefit.</p>
+</section>
+
+<div class="closing">
+  <h2>Questions?</h2>
+  <p>If anything here is unclear, or if you run into issues using the portal, send a message through the Communication Hub. I'm here to make this process easy for you.</p>
+  <p class="signoff">Looking forward to building something great together!</p>
+  <div class="eyebrow">Lindsay&nbsp;Dev&nbsp;Creative</div>
+</div>
+
+</main>
+</body>
+</html>
