@@ -1,0 +1,191 @@
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background-color: var(--black);
+    color: var(--off-white);
+    font-family: var(--font-body);
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.7;
+    text-wrap: pretty;
+    min-height: 100vh;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image:
+      radial-gradient(circle at 15% 20%, rgba(212, 168, 90, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 85% 80%, rgba(212, 168, 90, 0.04) 0%, transparent 50%);
+    background-attachment: fixed;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    padding: 100px 48px 80px;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+    white-space: nowrap;
+  }
+
+  .brand-logo { width: 48px; height: 48px; flex-shrink: 0; }
+  .brand-logo svg { width: 100%; height: 100%; display: block; }
+
+  .brand-name {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--off-white);
+    white-space: nowrap;
+  }
+
+  .eyebrow {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 400;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 28px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    white-space: nowrap;
+  }
+
+  .eyebrow::before {
+    content: '';
+    width: 32px;
+    height: 1px;
+    background-color: var(--gold);
+    flex-shrink: 0;
+  }
+
+  h1 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: clamp(36px, 6vw, 55px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--off-white);
+    margin-bottom: 32px;
+  }
+
+  h1 em { font-style: italic; color: var(--gold-light); }
+
+  .intro {
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--gray-3);
+    max-width: 640px;
+    margin-bottom: 72px;
+    font-weight: 300;
+  }
+
+  .section { margin-bottom: 56px; }
+  .section:last-of-type { margin-bottom: 0; }
+
+  h2 {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.2em;
+    letter-spacing: -0.015em;
+    color: var(--off-white);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 16px;
+  }
+
+  .section-number {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: 400;
+    color: var(--gold);
+    letter-spacing: 0.15em;
+    min-width: 28px;
+  }
+
+  .section p {
+    color: var(--gray-3);
+    max-width: 720px;
+    margin-left: 44px;
+  }
+
+  .section p + p { margin-top: 16px; }
+
+  .closing {
+    margin-top: 80px;
+    padding: 36px 0 0;
+    border-top: 1px solid var(--dark-2);
+  }
+
+  .closing p {
+    color: var(--gray-3);
+    max-width: 580px;
+    margin-bottom: 32px;
+  }
+
+  .actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .portal-btn {
+    display: inline-block;
+    padding: 13px 26px;
+    color: var(--gold);
+    border: 1px solid var(--gold);
+    text-decoration: none;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    white-space: nowrap;
+  }
+
+  .portal-btn:hover {
+    background-color: var(--gold);
+    color: var(--black);
+  }
+
+  @media (max-width: 720px) {
+    .page { padding: 64px 64px 48px; }
+    h1 { font-size: 32px; line-height: 1.3em; }
+    .intro { font-size: 16px; }
+    .section p { margin-left: 0; }
+    h2 {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 6px;
+      font-size: 29px;
+      line-height: 1.3em;
+    }
+    .section-number { min-width: 0; }
+    .brand-logo { width: 40px; height: 40px; }
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      white-space: normal;
+    }
+    .eyebrow::before { width: 24px; }
+    .actions { flex-direction: column; align-items: stretch; }
+    .portal-btn { text-align: center; }
+  }
